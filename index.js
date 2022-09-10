@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const Client = require('./client/Client');
-const config = require('./config.json');
+// const config = require('./config.json');
 const {Player} = require('discord-player');
 
 const client = new Client();
@@ -96,4 +96,4 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-client.login(config.token);
+client.login(process.env.token);
